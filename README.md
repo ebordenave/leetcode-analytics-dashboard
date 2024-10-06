@@ -28,8 +28,6 @@ The LeetCode Analytics Dashboard is designed to offer users a detailed view of t
 - Detailed contest analysis and comparison
 - Integration with learning resources for suggested upskilling areas
 
-[Rest of the README content remains the same, including Prerequisites, Installation, Usage, etc.]
-
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
