@@ -1,62 +1,89 @@
-LeetCode Profile GraphQL Server
+# LeetCode Profile GraphQL Server
+
 This project implements a GraphQL server that fetches and serves a user's LeetCode ranking. It uses Apollo Server to create a GraphQL endpoint and Axios to make requests to the LeetCode GraphQL API.
-Features
 
-GraphQL API to fetch LeetCode user ranking
-Error handling for API requests
-Easy to extend for additional LeetCode profile data
+## Features
 
-Planned Features
+- GraphQL API to fetch LeetCode user ranking
+- Error handling for API requests
+- Easy to extend for additional LeetCode profile data
 
-Frontend application to display LeetCode profile data (to be implemented)
+### Planned Features
+- Frontend application to display LeetCode profile data (to be implemented)
 
-Prerequisites
+## Prerequisites
+
 Before you begin, ensure you have met the following requirements:
 
-Node.js installed (version 12.x or higher recommended)
-npm (Node Package Manager) installed
+- Node.js installed (version 12.x or higher recommended)
+- npm (Node Package Manager) installed
 
-Installation
+## Installation
+
 To install the LeetCode Profile GraphQL Server, follow these steps:
 
-Clone the repository:
-Copygit clone https://github.com/yourusername/leetcode-profile-graphql-server.git
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/leetcode-profile-graphql-server.git
+   ```
 
-Navigate to the project directory:
-Copycd leetcode-profile-graphql-server
+2. Navigate to the project directory:
+   ```
+   cd leetcode-profile-graphql-server
+   ```
 
-Install the dependencies:
-Copynpm install
+3. Install the dependencies:
+   ```
+   npm install
+   ```
 
+## Usage
 
-Usage
-To run the GraphQL server, follow these steps:
+To run the GraphQL server:
 
-Make sure you're in the project directory.
-Start the server by running:
-Copynode index.js
-If you've set up a start script in your package.json, you can use:
-Copynpm start
+1. Make sure you're in the project directory.
 
-Once the server starts, you'll see a message in the console similar to:
-Copy🚀 Server ready at http://localhost:4000
+2. Start the server:
+   ```
+   node index.js
+   ```
+   Or, if you've set up a start script in your package.json:
+   ```
+   npm start
+   ```
 
-Open the provided URL in your web browser. This will take you to the GraphQL Playground, where you can interact with your API.
-In the GraphQL Playground, you can run queries. To fetch the LeetCode profile ranking, use this query:
-graphqlCopyquery {
-leetcodeProfile {
-ranking
-}
-}
+3. Once the server starts, you'll see a message like:
+   ```
+   🚀 Server ready at http://localhost:4000
+   ```
 
-Click the "Play" button or press Ctrl+Enter to execute the query.
+4. Open the provided URL in your browser to access the GraphQL Playground.
 
-To stop the server, press Ctrl+C in the terminal where the server is running.
-Future Development: Frontend
-A frontend application to display the LeetCode profile data is planned for future development. This will provide a user-friendly interface to interact with the GraphQL API. Stay tuned for updates!
-Configuration
-The current implementation fetches the ranking for a hardcoded username ("ebordenave"). To change this, modify the username in the GraphQL query within the leetcodeProfile resolver in the index.js file.
-Contributing
+5. In the Playground, you can run queries. To fetch the LeetCode profile ranking:
+   ```graphql
+   query {
+     leetcodeProfile {
+       ranking
+     }
+   }
+   ```
+
+6. Click the "Play" button or press Ctrl+Enter to execute the query.
+
+7. To stop the server, press Ctrl+C in the terminal.
+
+## Configuration
+
+The current implementation fetches the ranking for a hardcoded username ("ebordenave"). To change this, modify the username in the GraphQL query within the `leetcodeProfile` resolver in `index.js`.
+
+## Future Development: Frontend
+
+A frontend application to display the LeetCode profile data is planned for future development. This will provide a user-friendly interface to interact with the GraphQL API.
+
+## Contributing
+
 Contributions to the LeetCode Profile GraphQL Server are welcome. Please feel free to submit a Pull Request.
-License
-This project uses the following license: MIT License
+
+## License
+
+This project uses the MIT License.
