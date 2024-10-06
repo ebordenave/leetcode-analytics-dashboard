@@ -12,6 +12,18 @@ The LeetCode Analytics Dashboard is designed to offer users a detailed view of t
 4. Identifying strengths and suggesting areas for upskilling
 5. Providing insights into contest performance
 
+## Project Architecture
+```mermaid
+graph TD
+    A[Frontend: React] -->|GraphQL Queries| B[Backend: Python]
+    B -->|GraphQL Queries| C[LeetCode GraphQL API]
+    B -->|Cache Responses| D[Redis Cache]
+    B -->|Store User Data| E[Database: PostgreSQL]
+    F[Authentication Service] -->|Verify Requests| B
+    B -->|Serve GraphQL API| G[GraphQL Server: Graphene]
+    B -->|Web Framework| H[FastAPI]
+```
+This diagram illustrates the architecture of our LeetCode User Dashboard application, featuring a React frontend and a Python backend with FastAPI and Graphene.
 ## Features
 
 - GraphQL API to fetch comprehensive LeetCode user data
