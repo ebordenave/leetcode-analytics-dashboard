@@ -1,10 +1,8 @@
 # LeetCode Analytics Dashboard
 
-This project aims to create a comprehensive analytics dashboard for LeetCode users, providing insights into their performance, progress, and areas for improvement. It utilizes a GraphQL server with Apollo Server to fetch data from the LeetCode API, and will eventually include a frontend for data visualization.
+This project aims to create a comprehensive analytics dashboard for LeetCode users, providing insights into their performance, progress, and areas for improvement. It utilizes a Python backend with FastAPI and Graphene to fetch and serve data from the LeetCode API, and will eventually include a React frontend for data visualization.
 
 ## Project Goals
-
-The LeetCode Analytics Dashboard is designed to offer users a detailed view of their LeetCode journey, helping them track progress and identify areas for growth. Key objectives include:
 
 1. Tracking day-to-day changes in ranking (positive or negative)
 2. Visualizing ranking by region, state, or country
@@ -13,6 +11,7 @@ The LeetCode Analytics Dashboard is designed to offer users a detailed view of t
 5. Providing insights into contest performance
 
 ## Project Architecture
+
 ```mermaid
 graph TD
     A[Frontend: React] -->|GraphQL Queries| B[Backend: Python]
@@ -23,7 +22,8 @@ graph TD
     B -->|Serve GraphQL API| G[GraphQL Server: Graphene]
     B -->|Web Framework| H[FastAPI]
 ```
-This diagram illustrates the architecture of our LeetCode User Dashboard application, featuring a React frontend and a Python backend with FastAPI and Graphene.
+This diagram illustrates the architecture of the LeetCode User Dashboard application, featuring a React frontend and a Python backend with FastAPI and Graphene.
+
 ## Features
 
 - GraphQL API to fetch comprehensive LeetCode user data
@@ -40,55 +40,75 @@ This diagram illustrates the architecture of our LeetCode User Dashboard applica
 - Detailed contest analysis and comparison
 - Integration with learning resources for suggested upskilling areas
 
+## Technology Stack
+
+### Backend
+- Python 3.7+
+- FastAPI: Web framework for building APIs
+- Graphene: GraphQL framework for Python
+- PostgreSQL: Database for storing user data
+- Redis: Caching layer
+- Uvicorn: ASGI server
+
+### Frontend (Planned)
+- React: JavaScript library for building user interfaces
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-
-- Node.js installed (version 12.x or higher recommended)
-- npm (Node Package Manager) installed
+- Python 3.7 or higher installed
+- pip (Python Package Installer) installed
+- PostgreSQL installed and running
+- Redis installed and running
 
 ## Installation
 
-To install the LeetCode Profile GraphQL Server, follow these steps:
+To set up the LeetCode Analytics Dashboard, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/leetcode-profile-graphql-server.git
+   git clone https://github.com/yourusername/leetcode-analytics-dashboard.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd leetcode-profile-graphql-server
+   cd leetcode-analytics-dashboard
    ```
 
-3. Install the dependencies:
+3. Create a virtual environment:
    ```
-   npm install
+   python -m venv venv
+   ```
+
+4. Activate the virtual environment:
+   - On Windows: `venv\Scripts\activate`
+   - On macOS and Linux: `source venv/bin/activate`
+   
+
+5. Install the dependencies:
+   ```
+   pip install -r requirements.txt
    ```
 
 ## Usage
 
 To run the GraphQL server:
 
-1. Make sure you're in the project directory.
+1. Make sure you're in the project directory with your virtual environment activated.
 
-2. Start the server:
+2. Start the FastAPI server:
    ```
-   node index.js
-   ```
-   Or, if you've set up a start script in your package.json:
-   ```
-   npm start
+   uvicorn main:app --reload
    ```
 
 3. Once the server starts, you'll see a message like:
    ```
-   🚀 Server ready at http://localhost:4000
+   INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
    ```
 
-4. Open the provided URL in your browser to access the GraphQL Playground.
+4. Open the provided URL in your browser and append `/graphql` to access the GraphQL Playground (e.g., http://127.0.0.1:8000/graphql).
 
-5. In the Playground, you can run queries. To fetch the LeetCode profile ranking:
+5. In the Playground, you can run queries. For example:
    ```graphql
    query {
      leetcodeProfile {
@@ -103,15 +123,11 @@ To run the GraphQL server:
 
 ## Configuration
 
-The current implementation fetches the ranking for a hardcoded username ("ebordenave"). To change this, modify the username in the GraphQL query within the `leetcodeProfile` resolver in `index.js`.
+...
+## Development
 
-## Future Development: Frontend
+...
 
-A frontend application to display the LeetCode profile data is planned for future development. This will provide a user-friendly interface to interact with the GraphQL API.
-
-## Contributing
-
-Contributions to the LeetCode Profile GraphQL Server are welcome. Please feel free to submit a Pull Request.
 
 ## License
 
