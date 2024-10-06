@@ -1,15 +1,34 @@
-# LeetCode Profile GraphQL Server
+# LeetCode Analytics Dashboard
 
-This project implements a GraphQL server that fetches and serves a user's LeetCode ranking. It uses Apollo Server to create a GraphQL endpoint and Axios to make requests to the LeetCode GraphQL API.
+This project aims to create a comprehensive analytics dashboard for LeetCode users, providing insights into their performance, progress, and areas for improvement. It utilizes a GraphQL server with Apollo Server to fetch data from the LeetCode API, and will eventually include a frontend for data visualization.
+
+## Project Goals
+
+The LeetCode Analytics Dashboard is designed to offer users a detailed view of their LeetCode journey, helping them track progress and identify areas for growth. Key objectives include:
+
+1. Tracking day-to-day changes in ranking (positive or negative)
+2. Visualizing ranking by region, state, or country
+3. Analyzing performance across different skill areas (algorithms, data structures)
+4. Identifying strengths and suggesting areas for upskilling
+5. Providing insights into contest performance
 
 ## Features
 
-- GraphQL API to fetch LeetCode user ranking
-- Error handling for API requests
-- Easy to extend for additional LeetCode profile data
+- GraphQL API to fetch comprehensive LeetCode user data
+- Daily ranking change tracking
+- Regional and global ranking comparisons
+- Skill area analysis based on problem tags
+- Contest performance tracking
 
-### Planned Features
-- Frontend application to display LeetCode profile data (to be implemented)
+## Planned Features
+
+- Interactive frontend dashboard for data visualization
+- Personalized improvement suggestions based on performance analysis
+- Graphical representation of skill areas and progress
+- Detailed contest analysis and comparison
+- Integration with learning resources for suggested upskilling areas
+
+[Rest of the README content remains the same, including Prerequisites, Installation, Usage, etc.]
 
 ## Prerequisites
 

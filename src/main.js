@@ -65,7 +65,7 @@ const resolvers = {
   },
 };
 
-// Create an instance of ApolloServer with the defined schema and resolvers
+// Create an instance of ApolloServer with the defined git aschema and resolvers
 const server = new ApolloServer({ typeDefs, resolvers });
 
 /**
