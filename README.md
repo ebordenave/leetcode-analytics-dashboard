@@ -51,7 +51,8 @@ This diagram illustrates the architecture of the LeetCode User Dashboard applica
 - Uvicorn: ASGI server
 
 ### Frontend (Planned)
-- React: JavaScript library for building user interfaces
+- React:
+- Storybook:
 
 ## Prerequisites
 
