@@ -1,19 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {  createRoot } from 'react-dom/client';
+import App from './App';
 
-// Main App component
-const App: React.FC = () => {
-  return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
-  );
-};
+const container = document.getElementById('root');
+const root = createRoot(container!);
 
-// Render the App component to the root element
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

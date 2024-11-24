@@ -10,6 +10,7 @@
     "start:server": "node src/main.js"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
     "prettier": "^3.3.1",
     "vite": "^5.1.6"
   },
@@ -19,6 +20,8 @@
     "apollo-server": "^3.13.0",
     "axios": "^1.7.7",
     "graphql": "^16.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "^5.7.2"
   }
 }
