@@ -14,8 +14,11 @@
     "vite": "^5.1.6"
   },
   "dependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "apollo-server": "^3.13.0",
     "axios": "^1.7.7",
-    "graphql": "^16.9.0"
+    "graphql": "^16.9.0",
+    "typescript": "^5.7.2"
   }
 }
