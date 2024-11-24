@@ -43,7 +43,7 @@ This diagram illustrates the architecture of the LeetCode User Dashboard applica
 ## Technology Stack
 
 ### Backend
-- Python 3.7+
+- Python 3.9+
 - FastAPI: Web framework for building APIs
 - Graphene: GraphQL framework for Python
 - PostgreSQL: Database for storing user data
@@ -78,7 +78,7 @@ To set up the LeetCode Analytics Dashboard, follow these steps:
 
 3. Create a virtual environment:
    ```
-   python -m venv venv
+   python3 -m venv venv
    ```
 
 4. Activate the virtual environment:
