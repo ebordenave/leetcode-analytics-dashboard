@@ -1,18 +1,20 @@
-// @ts-ignore
-import React from 'react';
-import { Button } from './components/ui/button';
 
-const App: React.FC = () => {
-  const handleClick = () => {
-    alert('Button clicked!');
-  };
+import './App.css'
+import {Button} from "@/components/ui/button.tsx";
+import { Card } from './components/ui/card';
+
+function App() {
+
 
   return (
-    <div>
-      <h1>Hello, Vite + React!</h1>
-      <Button onClick={handleClick} variant="default">Click Me</Button>
-    </div>
-  );
-};
+    <>
+        <Card>
+          test card bounds
+          <Button>Testing</Button>
 
-export default App;
+        </Card>
+    </>
+  )
+}
+
+export default App
